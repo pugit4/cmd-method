@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border: 1px solid black;
+  padding: 4px 8px;
+}
+
+th:hover {
+   background-color: #ddd;
+}
+
+th {
+  background-color: #666;
+  text-transform: uppercase;
+}
+</style>  
+<body>
+
+<h1>List of BTS Members</h1>
+  
+<table style="width:50%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Phone</th>
+    <th>Talent</th>
+    <th>Age</th>
+    <th>Birth_Date</th>
+  </tr>  
+  {% for x in mymembers %}
+  <tr>
+    <td>{{ x.firstname }}</td>
+    <td>{{ x.lastname }}</td> 
+    <td>{{ x.phone}}</td>
+    <td>{{ x.Talent}}</td>
+    <td>{{ x.age}}</td>
+    <td>{{ x.Birth_Date}}</td>
+  </tr>  
+  {% endfor %}
+</table>
+
+</body>
+</html>
